@@ -14,7 +14,12 @@ body {
 body {
   margin: 0;
   padding: 0;
-  background: radial-gradient(circle at 20% 20%, #1d3658 0%, #0b1328 42%, #040812 100%);
+  background: radial-gradient(
+    circle at 20% 20%,
+    #1d3658 0%,
+    #0b1328 42%,
+    #040812 100%
+  );
   position: relative;
 }
 
@@ -30,23 +35,69 @@ body::after {
 body::before {
   background-image:
     radial-gradient(circle, rgba(255, 255, 255, 0.85) 0 1px, transparent 1.2px),
-    radial-gradient(circle, rgba(255, 228, 171, 0.72) 0 1.2px, transparent 1.4px),
+    radial-gradient(
+      circle,
+      rgba(255, 228, 171, 0.72) 0 1.2px,
+      transparent 1.4px
+    ),
     radial-gradient(circle, rgba(160, 213, 255, 0.6) 0 1px, transparent 1.2px);
-  background-size: 110px 110px, 170px 170px, 90px 90px;
+  background-size:
+    110px 110px,
+    170px 170px,
+    90px 90px;
   opacity: 0.75;
   animation: spaceDrift 70s linear infinite;
 }
 
 body::after {
   background:
-    radial-gradient(circle at 15% 75%, rgba(125, 170, 255, 0.22) 0, transparent 30%),
-    radial-gradient(circle at 85% 20%, rgba(255, 166, 111, 0.2) 0, transparent 26%);
+    radial-gradient(
+      circle at 15% 75%,
+      rgba(125, 170, 255, 0.22) 0,
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(255, 166, 111, 0.2) 0,
+      transparent 26%
+    );
   z-index: 0;
 }
 
 #root {
   position: relative;
   z-index: 1;
+}
+
+.shooting-lane {
+  position: absolute;
+  top: 40vh;
+  left: 0;
+  width: 100%;
+  height: 20vh;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.shooting-object {
+  position: absolute;
+  right: -70px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: radial-gradient(
+    circle,
+    #fdffef 0%,
+    #eaeeb5 58%,
+    rgba(229, 203, 135, 0.25) 100%
+  );
+  box-shadow:
+    0 0 12px rgba(255, 220, 136, 0.95),
+    22px 0 12px rgba(255, 220, 136, 0.35),
+    42px 0 14px rgba(255, 220, 136, 0.22);
+  animation: shootingTravel 8.5s linear 1 forwards;
 }
 
 .details3d-bg {
@@ -255,6 +306,65 @@ body::after {
   }
   to {
     transform: translate3d(-50px, -35px, 0);
+  }
+}
+
+@keyframes shootingTravel {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.86);
+    opacity: 0;
+  }
+  6% {
+    transform: translate3d(-8vw, 0.2vh, 0) scale(0.87);
+    opacity: 1;
+  }
+  14% {
+    transform: translate3d(-16vw, 0.6vh, 0) scale(0.88);
+  }
+  24% {
+    transform: translate3d(-28vw, 1.9vh, 0) scale(0.89);
+  }
+  34% {
+    transform: translate3d(-40vw, 3.9vh, 0) scale(0.9);
+  }
+  44% {
+    transform: translate3d(-52vw, 6.3vh, 0) scale(0.91);
+  }
+  54% {
+    transform: translate3d(-64vw, 9.1vh, 0) scale(0.91);
+  }
+  64% {
+    transform: translate3d(-76vw, 12.2vh, 0) scale(0.9);
+  }
+  74% {
+    transform: translate3d(-88vw, 15vh, 0) scale(0.89);
+  }
+  84% {
+    transform: translate3d(-100vw, 17.4vh, 0) scale(0.89);
+    opacity: 0.95;
+  }
+  96% {
+    transform: translate3d(-110vw, 19.4vh, 0) scale(0.88);
+    opacity: 0.65;
+  }
+  100% {
+    transform: translate3d(-116vw, 20vh, 0) scale(0.86);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .shooting-lane {
+    top: 40vh;
+  }
+  .shooting-object {
+    width: 12px;
+    height: 12px;
+    box-shadow:
+      0 0 10px rgba(255, 220, 136, 0.95),
+      16px 0 10px rgba(255, 220, 136, 0.32),
+      30px 0 10px rgba(255, 220, 136, 0.2);
+    animation-duration: 7.2s;
   }
 }
 
