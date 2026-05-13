@@ -1,0 +1,74 @@
+.details {
+  position: fixed;
+  z-index: 0;
+  display: grid;
+  place-items: center;
+  opacity: 0.96;
+}
+
+.details-planet-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+}
+
+.details-planet {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 28% 30%, #ffffff 0%, var(--planet-color) 36%, #0d1424 100%);
+  box-shadow: 0 0 20px color-mix(in srgb, var(--planet-color) 70%, transparent);
+  overflow: hidden;
+  animation: spin var(--spin-speed) linear infinite;
+}
+
+.details-shade,
+.details-highlight {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.details-shade {
+  inset: 0;
+  background: radial-gradient(circle at 75% 70%, rgba(3, 7, 15, 0.85) 10%, rgba(3, 7, 15, 0) 55%);
+}
+
+.details-highlight {
+  width: 45%;
+  height: 18%;
+  top: 18%;
+  left: 16%;
+  transform: rotate(-14deg);
+  background: rgba(255, 255, 255, 0.28);
+  filter: blur(2px);
+}
+
+.details-ring {
+  position: absolute;
+  width: 150%;
+  height: 44%;
+  border-radius: 50%;
+  border: 3px solid color-mix(in srgb, var(--planet-color) 65%, #f4e9b0);
+  background: radial-gradient(ellipse at center, rgba(244, 233, 176, 0.35) 0%, rgba(255, 255, 255, 0) 68%);
+  transform: rotate(-20deg);
+  opacity: 0.8;
+  filter: blur(0.2px);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1000px) {
+  .details {
+    display: none;
+  }
+}
