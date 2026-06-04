@@ -23,19 +23,24 @@ export default function About() {
           className="fotoPerfil"
         />
         <div style={{ textAlign: "justify", marginLeft: "20px" }}>
-          <p>
-            Frontend Developer con sólida formación técnica. <br />
+          <p className="paragrafh">
+            Frontend Developer con sólida formación técnica.
+          </p>
+          <br />
+          <p className="paragrafh">
             Especializado en React y TypeScript, con experiencia práctica
             construyendo interfaces a partir de diseños Figma. Historial
             comprobado trabajando en equipos remotos internacionales (Perú,
-            España) y capacidad para comunicarse en entornos técnicos en inglés.{" "}
-            <br />
+            España) y capacidad para comunicarse en entornos técnicos en inglés.
+            </p>
+          <br />
+          <p className="paragrafh">
             Perfil orientado a código limpio, componentes reutilizables y buenas
             prácticas de Git.
           </p>
         </div>
       </div>
-      <a href="\Rodrigo_Redel_CV.pdf" download>
+      <a href="\Redel_Rodrigo_CV.pdf" download>
         <button
           className="botonCV"
           onMouseEnter={(e) => {

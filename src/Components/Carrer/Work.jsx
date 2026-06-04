@@ -12,7 +12,7 @@ export default function Work() {
       <CardCarrerWork
         title="Profesor y Soporte Técnico"
         institution="Coding Giants (España)"
-        year="04/2025 - En actividad"
+        year="04/2025 - 03/2026"
       />
       <CardCarrerWork
         title="Desarrollador Web Trainee"

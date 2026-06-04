@@ -75,21 +75,22 @@ let Backend = [
     nombre: "Python",
     imgUrl: "/piton.png",
   },
-  // {
-  //   nombre: "JavaScript",
-  //   imgUrl: "https://img.icons8.com/?size=256&id=108784&format=png",
-  // },
-  // {
-  //   nombre: "TypeScript",
-  //   imgUrl:
-  //     "https://img.icons8.com/?size=256&id=uJM6fQYqDaZK&format=png&color=000000",
-  // },
   {
     nombre: "FastAPI",
     imgUrl: "/fastapi.png",
   },
   {
-    nombre: "Reflex",
-    imgUrl: "/reflex.png",
+    nombre: "TypeScript",
+    imgUrl:
+      "https://img.icons8.com/?size=256&id=uJM6fQYqDaZK&format=png&color=000000",
   },
+  {
+    nombre:"Node",
+    imgUrl:"https://img.icons8.com/?size=100&id=54087&format=png&color=000000"
+  },
+  {
+    nombre:"Express",
+    imgUrl:"https://img.icons8.com/?size=100&id=kg46nzoJrmTR&format=png&color=000000"
+  }
+  
 ];

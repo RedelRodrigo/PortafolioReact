@@ -1,35 +1,13 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
-import Details3D from "./projects/Details3D";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Hero() {
-  const [rotation, setRotation] = useState({ x: 0, y: 0 });
 
-  const handleMove = (event) => {
-    const bounds = event.currentTarget.getBoundingClientRect();
-    const mouseX = event.clientX - bounds.left;
-    const mouseY = event.clientY - bounds.top;
-    const normalizedX = mouseX / bounds.width - 0.5;
-    const normalizedY = mouseY / bounds.height - 0.5;
-    const maxDeg = 45;
-
-    setRotation({
-      x: Math.max(-maxDeg, Math.min(maxDeg, -normalizedY * maxDeg * 2)),
-      y: Math.max(-maxDeg, Math.min(maxDeg, normalizedX * maxDeg * 2)),
-    });
-  };
 
   return (
     <div className="hero-section" id="inicio">
-      <Details3D top="10vh" left="16vw" size="278px" />
       <div
         className="hero-tilt"
-        onMouseMove={handleMove}
-        onMouseLeave={() => setRotation({ x: 0, y: 0 })}
-        style={{
-          transform: `perspective(1100px) rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
-        }}
       >
         <div className="hero-copy">
           <h4 style={{ opacity: 0.7 }}>Hola mundo! Soy</h4>

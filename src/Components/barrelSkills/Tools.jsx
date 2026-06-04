@@ -84,6 +84,10 @@ let Tool = [
     imgUrl: "/vscode.png",
   },
   {
+    nombre: "Docker",
+    imgUrl: "/docker.png"
+  },
+  {
     nombre: "Figma",
     imgUrl: "/figma.webp",
   },

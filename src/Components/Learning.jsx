@@ -3,33 +3,27 @@ import { Cog } from "lucide-react";
 
 const tecnologias = [
   {
-    nombre: "Node.js",
-    imgUrl: "https://img.icons8.com/?size=256&id=54087&format=png",
-    progreso: 40,
+    nombre: "Java",
+    imgUrl: "/java.png",
+    progreso: 65,
     estado: "En curso",
   },
   {
-    nombre: "Express",
-    imgUrl: "https://img.icons8.com/?size=256&id=WNoJgbzDr3i2&format=png",
+    nombre: "Spring Boot",
+    imgUrl: "/springboot.svg",
+    progreso: 20,
+    estado: "En curso",
+  },
+  {
+    nombre: "AWS",
+    imgUrl: "aws.png",
     progreso: 10,
     estado: "En curso",
   },
   {
-    nombre: "MongoDB",
-    imgUrl: "https://img.icons8.com/?size=256&id=74402&format=png",
-    progreso: 25,
-    estado: "Iniciando",
-  },
-  {
-    nombre: "Docker",
-    imgUrl: "/docker.png",
-    progreso: 20,
-    estado: "Iniciando",
-  },
-  {
     nombre: "GraphQL",
     imgUrl: "/GraphQL.png",
-    progreso: 15,
+    progreso: 10,
     estado: "Explorando",
   },
 ];

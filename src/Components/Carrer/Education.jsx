@@ -3,19 +3,19 @@ export default function Education() {
   return (
     <div className="Education">
       <CardCarrerEdu
-        title="Iniciacion al desarrollo con IA"
-        institution="BigSchool & MoureDev"
-        year="2/2026"
-      />
-      <CardCarrerEdu
-        title="Frontend Developer"
-        institution="Digital House"
-        year="2025 - 2026 (Graduado)"
-      />
-      <CardCarrerEdu
         title="Professional Developer"
         institution="Digital House"
         year="2025 - En curso"
+      />
+        <CardCarrerEdu
+          title="Frontend Developer"
+          institution="Digital House"
+          year="2025 - 2026 (Graduado)"
+        />
+      <CardCarrerEdu
+        title="Iniciacion al desarrollo con IA"
+        institution="BigSchool & MoureDev"
+        year="2/2026"
       />
       <CardCarrerEdu
         title="Curso de React"

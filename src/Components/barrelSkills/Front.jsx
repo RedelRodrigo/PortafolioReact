@@ -80,13 +80,13 @@ let Frontend = [
   //   imgUrl: "https://img.icons8.com/?size=256&id=7gdY5qNXaKC0&format=png",
   // },
   {
+    nombre: "JavaScript",
+    imgUrl: "https://img.icons8.com/?size=256&id=108784&format=png",
+  },
+  {
     nombre: "TypeScript",
     imgUrl:
       "https://img.icons8.com/?size=256&id=uJM6fQYqDaZK&format=png&color=000000",
-  },
-  {
-    nombre: "React",
-    imgUrl: "/react.svg",
   },
   {
     nombre: "Bootstrap",
@@ -96,12 +96,13 @@ let Frontend = [
     nombre: "TailwindCSS",
     imgUrl: "/tailwind.png",
   },
+    {
+      nombre: "React",
+      imgUrl: "/react.svg",
+    },
   {
-    nombre: "Next.js",
+    nombre: "Next",
     imgUrl: "/nextjs.svg",
   },
-  {
-    nombre: "Reflex",
-    imgUrl: "/reflex.png",
-  },
+
 ];

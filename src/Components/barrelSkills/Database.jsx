@@ -79,4 +79,8 @@ let DB = [
     nombre: "PostgreSQL",
     imgUrl: "/Postgres.png",
   },
+  {
+    nombre:"MongoDB",
+    imgUrl:"https://img.icons8.com/?size=100&id=74402&format=png&color=000000"
+  }
 ];
