@@ -2,18 +2,14 @@ import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Hero() {
-
-
   return (
     <div className="hero-section" id="inicio">
-      <div
-        className="hero-tilt"
-      >
+      <div className="hero-tilt">
         <div className="hero-copy">
           <h4 style={{ opacity: 0.7 }}>Hola mundo! Soy</h4>
           <h1 style={{ fontFamily: "'Rock Salt', cursive" }}>Rodrigo</h1>
           <h3 style={{ opacity: 0.7, color: "#d3aa23ff" }}>
-            Desarrollador Frontend
+            Desarrollador Full Stack
           </h3>
           <p
             style={{

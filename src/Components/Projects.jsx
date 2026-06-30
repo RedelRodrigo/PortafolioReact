@@ -79,6 +79,24 @@ export default function Projects() {
       ],
       link: "https://poke-net.netlify.app/",
     },
+    {
+      id: 4,
+      title: "Biblioteca con Go",
+      image: `./../public/Golang.png`,
+      description:
+        "Desarrollo de una API RESTful (CRUD) para la gestión del sistema de una biblioteca.",
+      fullDescription:
+        "Desarrollo de una API RESTful (CRUD) construida con Golang para la gestión del sistema de una biblioteca. El proyecto se enfoca en la estructuración eficiente del código del servidor, el enrutamiento y la manipulación de datos. La API permite realizar operaciones de creación, lectura, actualización y eliminación de libros, autores y usuarios, proporcionando una base sólida para aplicaciones web o móviles que requieran funcionalidades de gestión bibliotecaria.",
+      technologies: ["Golang", "PostgreSQL", "Docker", "PostMan"],
+      features: [
+        "Gestión de libros, autores y usuarios",
+        "Operaciones CRUD completas",
+        "Estructura de código modular y escalable",
+        "Documentación de la API con Postman",
+        "Integración con base de datos PostgreSQL",
+      ],
+      link: "https://github.com/RedelRodrigo/Crud-con-Go",
+    },
   ];
 
   return (
@@ -140,7 +158,7 @@ export default function Projects() {
               }}
             >
               <img
-                src={`https://image.thum.io/get/width/600/crop/400/${project.link}`}
+                src={`${project.image}`}
                 alt={project.title}
                 style={{
                   width: "100%",

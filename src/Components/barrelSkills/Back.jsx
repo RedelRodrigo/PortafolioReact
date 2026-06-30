@@ -72,6 +72,11 @@ export default function Back() {
 
 let Backend = [
   {
+    nombre: "Golang",
+    imgUrl:
+      "https://img.icons8.com/?size=100&id=IrYuykLoqOH6&format=png&color=000000",
+  },
+  {
     nombre: "Python",
     imgUrl: "/piton.png",
   },
@@ -85,12 +90,12 @@ let Backend = [
       "https://img.icons8.com/?size=256&id=uJM6fQYqDaZK&format=png&color=000000",
   },
   {
-    nombre:"Node",
-    imgUrl:"https://img.icons8.com/?size=100&id=54087&format=png&color=000000"
+    nombre: "Node",
+    imgUrl: "https://img.icons8.com/?size=100&id=54087&format=png&color=000000",
   },
   {
-    nombre:"Express",
-    imgUrl:"https://img.icons8.com/?size=100&id=kg46nzoJrmTR&format=png&color=000000"
-  }
-  
+    nombre: "Express",
+    imgUrl:
+      "https://img.icons8.com/?size=100&id=kg46nzoJrmTR&format=png&color=000000",
+  },
 ];

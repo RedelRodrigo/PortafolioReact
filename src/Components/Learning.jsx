@@ -5,7 +5,7 @@ const tecnologias = [
   {
     nombre: "Java",
     imgUrl: "/java.png",
-    progreso: 65,
+    progreso: 85,
     estado: "En curso",
   },
   {
@@ -19,12 +19,6 @@ const tecnologias = [
     imgUrl: "aws.png",
     progreso: 10,
     estado: "En curso",
-  },
-  {
-    nombre: "GraphQL",
-    imgUrl: "/GraphQL.png",
-    progreso: 10,
-    estado: "Explorando",
   },
 ];
 

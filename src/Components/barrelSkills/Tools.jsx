@@ -85,11 +85,12 @@ let Tool = [
   },
   {
     nombre: "Docker",
-    imgUrl: "/docker.png"
+    imgUrl: "/docker.png",
   },
   {
-    nombre: "Figma",
-    imgUrl: "/figma.webp",
+    nombre: "Postman",
+    imgUrl:
+      "https://img.icons8.com/?size=100&id=IoYmHUxgvrFB&format=png&color=000000",
   },
   {
     nombre: "Claude",

@@ -24,19 +24,20 @@ export default function About() {
         />
         <div style={{ textAlign: "justify", marginLeft: "20px" }}>
           <p className="paragrafh">
-            Frontend Developer con sólida formación técnica.
+            Desarrollador Full Stack con sólida formación técnica.
           </p>
           <br />
           <p className="paragrafh">
-            Especializado en React y TypeScript, con experiencia práctica
-            construyendo interfaces a partir de diseños Figma. Historial
-            comprobado trabajando en equipos remotos internacionales (Perú,
-            España) y capacidad para comunicarse en entornos técnicos en inglés.
-            </p>
+            Especializado en React y Next, con experiencia práctica construyendo
+            interfaces a partir de diseños Figma. Historial comprobado
+            trabajando en equipos remotos internacionales (Perú, España) y
+            capacidad para comunicarse en entornos técnicos en inglés.
+          </p>
           <br />
           <p className="paragrafh">
-            Perfil orientado a código limpio, componentes reutilizables y buenas
-            prácticas de Git.
+            Apasionado por la tecnología y el aprendizaje continuo, siempre en
+            busca de nuevos desafíos para crecer profesionalmente y contribuir
+            al éxito de los proyectos.
           </p>
         </div>
       </div>
