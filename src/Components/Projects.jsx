@@ -82,7 +82,7 @@ export default function Projects() {
     {
       id: 4,
       title: "Biblioteca con Go",
-      image: `./../public/golang.webp`,
+      image: `/golang.webp`,
       description:
         "Desarrollo de una API RESTful (CRUD) para la gestión del sistema de una biblioteca.",
       fullDescription:
