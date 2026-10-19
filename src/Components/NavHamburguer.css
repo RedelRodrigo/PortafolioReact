@@ -1,0 +1,171 @@
+.mnav,
+.mnav__overlay,
+.mnav__panel {
+  --mnav-bg: #0b1530;
+  --mnav-surface: rgba(255, 255, 255, 0.06);
+  --mnav-text: #e8ecf7;
+  --mnav-muted: #9aa6c4;
+  --mnav-accent: #d3aa23;
+  --mnav-width: min(80vw, 300px);
+}
+
+/* Botón hamburguesa */
+.mnav__toggle {
+  position: relative;
+  z-index: 1002;
+  display: grid;
+  place-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.mnav__toggle:hover {
+  background: var(--mnav-surface);
+  border-color: var(--mnav-accent);
+}
+
+.mnav__bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--mnav-text);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+.mnav__toggle.is-open .mnav__bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.mnav__toggle.is-open .mnav__bar:nth-child(2) {
+  opacity: 0;
+}
+.mnav__toggle.is-open .mnav__bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Fondo oscuro detrás del panel */
+.mnav__overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(3, 8, 22, 0.6);
+  backdrop-filter: blur(3px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+}
+
+.mnav__overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease;
+}
+
+/* Panel lateral: siempre en el DOM para que la animación funcione */
+.mnav__panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: var(--mnav-width);
+  padding: 88px 20px 28px;
+  background-color: #0b1530;
+  background-color: var(--mnav-bg);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  transform: translateX(100%);
+  visibility: hidden; /* evita que sus links reciban foco cuando está cerrado */
+  transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1),
+    visibility 0s linear 0.35s;
+}
+
+.mnav__panel.is-open {
+  transform: translateX(0);
+  visibility: visible;
+  transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.mnav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mnav__link {
+  display: block;
+  padding: 14px 16px;
+  color: var(--mnav-muted);
+  font-size: 1.05rem;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  border-radius: 0 10px 10px 0;
+  transition: color 0.2s ease, background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.mnav__link:hover {
+  color: var(--mnav-text);
+  background: var(--mnav-surface);
+}
+
+.mnav__link.is-active {
+  color: var(--mnav-text);
+  background: var(--mnav-surface);
+  border-left-color: var(--mnav-accent);
+}
+
+.mnav__cta {
+  display: block;
+  padding: 14px 16px;
+  text-align: center;
+  font-weight: 600;
+  color: #0b1530;
+  text-decoration: none;
+  background: var(--mnav-accent);
+  border-radius: 12px;
+  transition: filter 0.2s ease;
+}
+
+.mnav__cta:hover {
+  filter: brightness(1.1);
+}
+
+/* Foco visible para teclado */
+.mnav__toggle:focus-visible,
+.mnav__link:focus-visible,
+.mnav__cta:focus-visible {
+  outline: 2px solid var(--mnav-accent);
+  outline-offset: 2px;
+}
+
+/* Breakpoint: el menú hamburguesa se muestra hasta 1000px.
+   Tu navbar de escritorio debe aparecer desde 1001px. */
+@media (min-width: 1001px) {
+  .mnav,
+  .mnav__overlay,
+  .mnav__panel {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mnav__panel,
+  .mnav__overlay,
+  .mnav__bar,
+  .mnav__link {
+    transition: none;
+  }
+}
