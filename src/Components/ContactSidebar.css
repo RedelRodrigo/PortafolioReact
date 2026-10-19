@@ -1,0 +1,225 @@
+.csb {
+  --csb-bg: #0b1530;
+  --csb-text: #e8ecf7;
+  --csb-accent: #d3aa23;
+
+  position: fixed;
+  top: 50%;
+  left: 16px;
+  z-index: 900; /* por debajo del menú hamburguesa (1000+) */
+  transform: translate(0, -50%);
+  padding: 8px;
+  background-color: var(--csb-bg);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* ---------- Animaciones (keyframes) ---------- */
+
+/* Salir: se desliza hacia la izquierda y se desvanece */
+.csb--out {
+  animation: csb-out 0.6s cubic-bezier(0.32, 0.72, 0, 1) forwards;
+  pointer-events: none;
+}
+
+/* Volver: entra deslizándose desde la izquierda */
+.csb--in {
+  animation: csb-in 0.6s cubic-bezier(0.32, 0.72, 0, 1) both;
+}
+
+/* Botones en cascada al volver */
+.csb--in .csb__list li {
+  animation: csb-item-in 0.45s cubic-bezier(0.32, 0.72, 0, 1) both;
+}
+.csb--in .csb__list li:nth-child(1) { animation-delay: 0.15s; }
+.csb--in .csb__list li:nth-child(2) { animation-delay: 0.23s; }
+.csb--in .csb__list li:nth-child(3) { animation-delay: 0.31s; }
+
+@keyframes csb-out {
+  from {
+    opacity: 1;
+    transform: translate(0, -50%);
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    transform: translate(-150%, -50%);
+    visibility: hidden; /* lo saca también del foco de teclado */
+  }
+}
+
+@keyframes csb-in {
+  from {
+    opacity: 0;
+    transform: translate(-150%, -50%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, -50%);
+  }
+}
+
+@keyframes csb-item-in {
+  from {
+    opacity: 0;
+    transform: translateX(-14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ---------- Lista y botones ---------- */
+
+.csb__list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.csb__link {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  color: var(--csb-text);
+  text-decoration: none;
+  border-radius: 12px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.csb__link:hover,
+.csb__link:focus-visible {
+  color: var(--csb-bg);
+  background-color: var(--csb-accent);
+}
+
+.csb__link:focus-visible {
+  outline: 2px solid var(--csb-accent);
+  outline-offset: 2px;
+}
+
+/* Etiqueta al pasar el mouse (solo dispositivos con hover) */
+.csb__tip {
+  position: absolute;
+  left: calc(100% + 14px);
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  color: var(--csb-text);
+  background-color: var(--csb-bg);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+
+@media (hover: hover) {
+  .csb__link:hover .csb__tip,
+  .csb__link:focus-visible .csb__tip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+}
+
+/* ---------- Celular: barra horizontal abajo ---------- */
+@media (max-width: 600px) {
+  .csb {
+    top: auto;
+    bottom: 16px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .csb--out {
+    animation-name: csb-out-mobile;
+  }
+
+  .csb--in {
+    animation-name: csb-in-mobile;
+  }
+
+  .csb--in .csb__list li {
+    animation-name: csb-item-in-mobile;
+  }
+
+  .csb__list {
+    flex-direction: row;
+  }
+
+  .csb__tip {
+    display: none;
+  }
+}
+
+@keyframes csb-out-mobile {
+  from {
+    opacity: 1;
+    transform: translate(-50%, 0);
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, 150%);
+    visibility: hidden;
+  }
+}
+
+@keyframes csb-in-mobile {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 150%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes csb-item-in-mobile {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Reducir movimiento: solo fundido, sin deslizar ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .csb--out {
+    animation-name: csb-fade-out;
+    animation-duration: 0.4s;
+  }
+
+  .csb--in {
+    animation-name: csb-fade-in;
+    animation-duration: 0.4s;
+  }
+
+  .csb--in .csb__list li {
+    animation: none;
+  }
+}
+
+@keyframes csb-fade-out {
+  from { opacity: 1; visibility: visible; }
+  to   { opacity: 0; visibility: hidden; }
+}
+
+@keyframes csb-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

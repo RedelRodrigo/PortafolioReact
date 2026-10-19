@@ -9,6 +9,7 @@ import {
   Projects,
   Contact,
   Footer,
+  ContactSidebar,
 } from "./Components";
 
 function App() {
@@ -17,12 +18,13 @@ function App() {
       <div className="shooting-lane" aria-hidden="true">
         <span className="shooting-object" />
       </div>
+      <ContactSidebar />
       <Nav />
       <Hero />
       <About />
       <Career />
       <Skills />
-      <Learning />
+      {/* <Learning /> */}
       <Projects />
       <Contact />
       <Footer />

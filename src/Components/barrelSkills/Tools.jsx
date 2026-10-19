@@ -93,7 +93,7 @@ let Tool = [
       "https://img.icons8.com/?size=100&id=IoYmHUxgvrFB&format=png&color=000000",
   },
   {
-    nombre: "Claude",
-    imgUrl: "/claude.webp",
+    nombre: "IA",
+    imgUrl: "/IA.png",
   },
 ];

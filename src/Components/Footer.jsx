@@ -37,7 +37,7 @@ export default function Footer() {
         }}
       >
         <h3 style={{ fontFamily: "Rock Salt, cursive" }}>Rodrigo Redel</h3>
-        <p>Desarrollador Full Stack</p>
+        <p>Desarrollador Frontend</p>
       </div>
     </footer>
   );

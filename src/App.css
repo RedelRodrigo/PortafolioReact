@@ -31,22 +31,18 @@ body::after {
   pointer-events: none;
   z-index: 0;
 }
-
+/* Estrellas en el fondo */
 body::before {
   background-image:
-    radial-gradient(circle, rgba(255, 255, 255, 0.85) 0 1px, transparent 2.2px),
-    radial-gradient(
-      circle,
-      rgba(255, 228, 171, 0.72) 0 1px,
-      transparent 1.4px
-    ),
-    radial-gradient(circle, rgba(160, 213, 255, 0.6) 0 1px, transparent 1px),
-    radial-gradient(circle, rgba(50, 190, 55, 0.9) 0 1px, transparent 1.2px);
-    background-size:
+    radial-gradient(circle, rgba(255, 255, 255, 0.85) 0 1px, transparent 0.4px),
+    radial-gradient(circle, rgba(255, 228, 171, 0.72) 0 1px, transparent 0.3px),
+    radial-gradient(circle, rgba(160, 213, 255, 0.6) 0 1px, transparent 0.2px),
+    radial-gradient(circle, rgba(50, 190, 55, 0.9) 0 1px, transparent 0.6px);
+  background-size:
     100px 100px,
     85px 85px,
     50px 50px;
-  opacity: 0.75;
+  opacity: 0.35;
   animation: spaceDrift 0s linear infinite;
 }
 
@@ -100,8 +96,6 @@ body::after {
     42px 0 14px rgba(255, 220, 136, 0.22);
   animation: shootingTravel 8.5s linear 1 forwards;
 }
-
-
 
 .hero-section {
   background-color: transparent;
@@ -379,6 +373,7 @@ body::after {
 }
 
 .paragrafh {
-  text-shadow: 0 0 3px rgba(211, 170, 35, 0.6),
-               1px 1px 1px rgba(0, 0, 0, 0.5);
+  text-shadow:
+    0 0 3px rgba(211, 170, 35, 0.6),
+    1px 1px 1px rgba(0, 0, 0, 0.5);
 }

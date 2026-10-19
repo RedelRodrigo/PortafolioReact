@@ -9,7 +9,7 @@ export default function Hero() {
           <h4 style={{ opacity: 0.7 }}>Hola mundo! Soy</h4>
           <h1 style={{ fontFamily: "'Rock Salt', cursive" }}>Rodrigo</h1>
           <h3 style={{ opacity: 0.7, color: "#d3aa23ff" }}>
-            Desarrollador Full Stack
+            Desarrollador Frontend
           </h3>
           <p
             style={{

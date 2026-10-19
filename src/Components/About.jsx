@@ -24,7 +24,7 @@ export default function About() {
         />
         <div style={{ textAlign: "justify", marginLeft: "20px" }}>
           <p className="paragrafh">
-            Desarrollador Full Stack con sólida formación técnica.
+            Desarrollador Frontend con sólida formación técnica.
           </p>
           <br />
           <p className="paragrafh">
