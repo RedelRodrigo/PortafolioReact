@@ -8,7 +8,7 @@ export default function Projects() {
     {
       id: 1,
       title: "Pokedex",
-      image: `https://image.thum.io/get/width/600/crop/400/https://prueba-dev.netlify.app/`,
+      image: `prueba-dev.netlify.app_.png`,
       description: "Pokedex interactivo hecho con React.",
       fullDescription:
         "Una Pokédex interactiva que consume la API de Pokémon para mostrar información detallada de cada Pokémon, incluyendo estadísticas, habilidades y evoluciones. Mas un sistema de tareas para gestionar el consumo de la API con Redux Toolkit y RTK Query, y validación de datos con Zod.",
@@ -33,7 +33,7 @@ export default function Projects() {
     {
       id: 2,
       title: "eCommerce",
-      image: `https://image.thum.io/get/width/600/crop/400/https://ecommerce-react-2025.netlify.app/`,
+      image: `ecommerce-react-2025.netlify.app_.png`,
       description: "Proyecto de eCommerce hecho con React",
       fullDescription:
         "Una aplicación completa de comercio electrónico desarrollada con React, que incluye carrito de compras, gestión de productos y un sistema de checkout. Gestionando el consumo de la api MockAPI con Redux para el manejo del estado.",
@@ -58,7 +58,7 @@ export default function Projects() {
     {
       id: 3,
       title: "PokéNet",
-      image: `https://image.thum.io/get/width/600/crop/400/https://poke-net.netlify.app/`,
+      image: `poke-net.netlify.app_.png`,
       description: "Red social temática de Pokémon hecha con Next.js.",
       fullDescription:
         "Una red social inspirada en el universo Pokémon donde cada Pokémon tiene su propio perfil y puede publicar estados, interactuar con otros y explorar contenido. Incluye feed de publicaciones, perfiles individuales, sección de exploración y sistema de interacciones (likes, comentarios y compartir).",
@@ -96,6 +96,38 @@ export default function Projects() {
         "Integración con base de datos PostgreSQL",
       ],
       link: "https://github.com/RedelRodrigo/Crud-con-Go",
+    },
+    {
+      id: 5,
+      title: "Beat Lab",
+      image: `beat-lab-113.pages.dev_.png`,
+      description:
+        "Secuenciador de ritmos (drum machine) en el navegador, con sonidos sintetizados mediante la Web Audio API. Permite crear patrones, guardarlos y compartirlos por link.",
+      fullDescription:
+        "Beat Lab es una drum machine web construida desde cero, sin librerías de audio ni samples. Todos los sonidos se sintetizan en tiempo real con la Web Audio API, y un lookahead scheduler sobre el reloj de audio mantiene el ritmo preciso.Permite pintar patrones en una grilla de 16 pasos, ajustar tempo y swing, y ver un visualizador de espectro en vivo. Los patrones se guardan y se comparten por link, con opción de hacer remixes de patrones ajenos. El backend usa Express 5 y SQLite, y un paquete compartido con esquemas Zod valida los datos tanto en el servidor como en el cliente.",
+      technologies: [
+        "React",
+        "Typescript",
+        "Web Audio API",
+        "Tailwind CSS",
+        "Express 5",
+        "PostgreSQL",
+        "Docker",
+        "SQLite",
+        "Zod",
+        "Tanstack Query",
+      ],
+      features: [
+        "Grilla de 16 pasos con sonidos sintetizados en tiempo real",
+        "Control de tempo, swing, volumen y mute por pista",
+        "Edición en vivo mientras el patrón suena",
+        "Visualizador de espectro de audio en tiempo real",
+        "Presets de géneros y hasta 8 pistas",
+        "Guardado y link para compartir patrones",
+        "Remix de patrones ajenos y galería pública",
+        "Compatible con móvil y atajos de teclado",
+      ],
+      link: "https://beat-lab-113.pages.dev/",
     },
   ];
 
