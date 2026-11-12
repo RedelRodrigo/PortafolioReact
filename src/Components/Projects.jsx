@@ -29,6 +29,7 @@ export default function Projects() {
         "Interfaz responsive",
       ],
       link: "https://prueba-dev.netlify.app/",
+      github: "https://github.com/RedelRodrigo/prueba_tecnica",
     },
     {
       id: 2,
@@ -54,6 +55,7 @@ export default function Projects() {
         "Sistema de usuarios y autenticación",
       ],
       link: "https://ecommerce-react-2025.netlify.app/",
+      github: "https://github.com/RedelRodrigo/EcommerceJs-Redel-Rodrigo",
     },
     {
       id: 3,
@@ -78,6 +80,7 @@ export default function Projects() {
         "Diseño responsive",
       ],
       link: "https://poke-net.netlify.app/",
+      github: "https://github.com/RedelRodrigo/Poke-Net",
     },
     {
       id: 4,
@@ -95,7 +98,8 @@ export default function Projects() {
         "Documentación de la API con Postman",
         "Integración con base de datos PostgreSQL",
       ],
-      link: "https://github.com/RedelRodrigo/Crud-con-Go",
+      // link: "https://github.com/RedelRodrigo/Crud-con-Go",
+      github: "https://github.com/RedelRodrigo/Crud-con-Go",
     },
     {
       id: 5,
@@ -128,6 +132,7 @@ export default function Projects() {
         "Compatible con móvil y atajos de teclado",
       ],
       link: "https://beat-lab-113.pages.dev/",
+      github: "https://github.com/RedelRodrigo/beat-lab",
     },
     {
       id: 5, // O el número que le siga en tu listado
@@ -158,6 +163,7 @@ export default function Projects() {
         "Despliegue contenedorizado con Docker y soporte para producción",
       ],
       link: "https://gestorgastos-8rby.onrender.com/",
+      github: "https://github.com/RedelRodrigo/GestorGastos",
     },
   ];
 
