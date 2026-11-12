@@ -129,6 +129,36 @@ export default function Projects() {
       ],
       link: "https://beat-lab-113.pages.dev/",
     },
+    {
+      id: 5, // O el número que le siga en tu listado
+      title: "Gestor de Gastos Full-Stack",
+      image: `/GestorGastos.jpg`, // O la imagen que prefieras usar
+      description:
+        "Aplicación web full-stack para el control y categorización de finanzas personales con autenticación de usuarios.",
+      fullDescription:
+        "Plataforma web full-stack moderna desarrollada con React y TypeScript en el cliente, y un backend de alto rendimiento en Go utilizando el framework Gin. La aplicación cuenta con un sistema robusto de autenticación, gestión completa de gastos (CRUD), resúmenes automáticos por categorías y filtrado avanzado. Se conecta a una base de datos SQLite distribuida mediante Turso y está completamente empaquetada mediante Docker para garantizar un despliegue y portabilidad impecables.",
+      technologies: [
+        "Golang",
+        "Gin",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "SQLite",
+        "Turso",
+        "Docker",
+        "Bun",
+      ],
+      features: [
+        "Autenticación y registro de usuarios con sesiones persistentes",
+        "Gestión completa de gastos (Crear, leer, actualizar, eliminar)",
+        "Resumen financiero en tiempo real agrupado por categorías",
+        "Filtros avanzados por categoría y rangos de fechas",
+        "Interfaz moderna y responsiva optimizada con Tailwind CSS",
+        "Arquitectura modular en Go con separación estricta de rutas y repositorios",
+        "Despliegue contenedorizado con Docker y soporte para producción",
+      ],
+      link: "https://github.com/RedelRodrigo/GestorGastos",
+    },
   ];
 
   return (
