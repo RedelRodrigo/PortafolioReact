@@ -157,7 +157,7 @@ export default function Projects() {
         "Arquitectura modular en Go con separación estricta de rutas y repositorios",
         "Despliegue contenedorizado con Docker y soporte para producción",
       ],
-      link: "https://github.com/RedelRodrigo/GestorGastos",
+      link: "https://gestorgastos-8rby.onrender.com/",
     },
   ];
 
