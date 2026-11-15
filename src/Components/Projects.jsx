@@ -165,6 +165,35 @@ export default function Projects() {
       link: "https://gestorgastos-8rby.onrender.com/",
       github: "https://github.com/RedelRodrigo/GestorGastos",
     },
+    {
+  id: 6,
+  title: "E-Commerce Moderno & Dashboard (Next.js Edition)",
+  image: "proyecto-ecommerce-actualizacion.vercel.app_.png", // O la ruta de la captura de pantalla de tu nueva app
+  description: "E-commerce full-stack de alta gama desarrollado con Next.js, TypeScript y Tailwind CSS.",
+  fullDescription:
+    "Una plataforma de comercio electrónico moderna, sofisticada y de alta conversión. Desarrollada con Next.js (App Router), TypeScript y Bun. Cuenta con un catálogo dinámico con paginación, buscador avanzado con debounce en tiempo real, carrito de compras persistente, diseño en modo oscuro con estética de lujo y un panel de administración protegido con control de roles (Admin/User).",
+  technologies: [
+    "Next.js",
+    "TypeScript",
+    "React",
+    "Tailwind CSS",
+    "Bootstrap 5",
+    "Bun",
+    "Axios",
+    "MockAPI",
+    "Lucide React"
+  ],
+  features: [
+    "Catálogo de productos interactivo con paginación y diseño glassmorphism",
+    "Buscador en tiempo real optimizado con debounce y lista flotante de acceso rápido",
+    "Gestión completa de carrito de compras (agregar, eliminar, vaciar y cálculo de totales)",
+    "Sistema de autenticación con roles diferenciados (Usuario / Administrador)",
+    "Panel de administración CRUD completo para gestión de productos (Crear, Editar, Eliminar)",
+    "Interfaz 100% responsive con modo oscuro nativo de alta gama"
+  ],
+  link: "https://proyecto-ecommerce-actualizacion.vercel.app/", // Reemplaza con tu link definitivo de Vercel
+  github: "https://github.com/RedelRodrigo/proyecto-ecommerce-actualizacion", // Tu repositorio actual en GitHub
+}
   ];
 
   return (
